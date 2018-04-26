@@ -1,7 +1,6 @@
 package com.house.kotlin.glide
 
 import android.os.Looper
-import android.text.TextUtils
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
