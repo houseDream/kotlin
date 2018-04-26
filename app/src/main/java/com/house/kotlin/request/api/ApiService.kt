@@ -2,7 +2,10 @@ package com.house.kotlin.request.api
 
 import com.house.kotlin.request.bean.BaseResponse
 import io.reactivex.Observable
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.http.*
+import java.util.*
 
 /**
  * +----------------------------------------------------------------------
@@ -14,8 +17,15 @@ import retrofit2.http.*
 interface ApiService {
 
     @POST("mebike/search/near/vehicle")
-    fun getHome(@QueryMap params : Map<String,String>) : Observable<BaseResponse<Object>>
+    fun getHome(@QueryMap params: Map<String, String>): Observable<BaseResponse<Object>>
 
+    // 普通post请求
     @POST
-    fun postRequest(@Url url:String ,@QueryMap params: Map<String, String>) :Observable<BaseResponse<Object>>
+    fun postRequest(@Url url: String, @QueryMap params: HashMap<String, String>): Observable<BaseResponse<Object>>
+
+    // 文件上传
+    @Multipart
+    @POST
+    fun uploadRequest(@Url url: String, @Body params: RequestBody): Observable<BaseResponse<Object>>
+
 }

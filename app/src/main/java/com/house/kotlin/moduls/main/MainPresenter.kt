@@ -27,7 +27,7 @@ class MainPresenter : BasePresenter<MainContract.View>(), MainContract.Presenter
     override fun buttonClickListener(message: String?) {
         removeDisposable(homeDisposable)
         mRootView?.setToast(message + "\nPresenter")
-        val params: Map<String, String> = hashMapOf(
+        var params: HashMap<String, String> = hashMapOf(
                 "longitude" to "0",
                 "latitude" to "0"
         )
