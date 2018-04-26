@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Kotlin</string>
+
+    <!--地图-->
+    <string name="mapview_search_no_result">对不起，没有搜索到相关数据！</string>
+</resources>
