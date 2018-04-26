@@ -4,9 +4,9 @@ import android.util.Log
 import com.house.kotlin.request.bean.BaseResponse
 import com.house.kotlin.rx.scheduler.SchedulerUtils
 import io.reactivex.disposables.Disposable
-import okhttp3.RequestBody
 import okhttp3.MediaType
 import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import java.io.File
 
 
@@ -40,6 +40,7 @@ object RetrofitRequest {
         return RetrofitManager.service.postRequest(url, paramsRequest).compose(SchedulerUtils.ioMain()).subscribe(
                 { t: BaseResponse<Object>? ->
 
+                    // 通用回调处理
                     if (t?.code == -3) {
                         Log.e("request--->", t?.message)
                     } else {
@@ -86,6 +87,7 @@ object RetrofitRequest {
         return RetrofitManager.service.uploadRequest(url, builder.build()).compose(SchedulerUtils.ioMain()).subscribe(
                 { t: BaseResponse<Object>? ->
 
+                    // 通用回调处理
                     if (t?.code == -3) {
                         Log.e("request--->", t?.message)
                     } else {

@@ -16,13 +16,21 @@
         app:layout_constraintTop_toTopOf="parent"></com.house.kotlin.map.GDMapView>
 
     <Button
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:textSize="20sp"
         android:id="@+id/button"
-        android:textColor="#ff0"
-        android:text="点击按钮"
         android:layout_width="0dp"
-        android:layout_height="50dp" />
+        android:layout_height="50dp"
+        android:text="点击按钮"
+        android:textColor="#ff0"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.house.kotlin.widget.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_launcher_background"
+        app:rectRoundRadius="5dp"
+        app:imageType="rounded_rect" />
 
 </android.support.constraint.ConstraintLayout>

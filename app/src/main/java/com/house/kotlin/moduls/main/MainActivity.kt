@@ -1,9 +1,11 @@
 package com.house.kotlin.moduls.main
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import com.house.kotlin.R
 import com.house.kotlin.base.BaseActivity
+import com.house.kotlin.utils.Md5Utils
 import com.house.kotlin.utils.ToastUtils
 import kotlinx.android.synthetic.main.activity_main.*
 
